@@ -10,7 +10,7 @@
 3.越狱设备提取libsubstrate.dylib，或者直接使用仓库的libsubstrate.dylib
 
 # 使用方法
-1.下载inject_dylib</br>
+1.下载[inject_dylib.tar.gz](https://github.com/kevll/inject_dylib/releases/download/0.0.1/inject_dylib.tar.gz)，解压缩得到inject_dylib</br>
 2.双击运行inject_dylib，依次拖拽源ipa、libsubstrate.dylib、xxx.dylib、insert_dylib到终端</br>
 3.在源ipa目录会生成xxx_injected.ipa文件，即被注入dylib的ipa文件。
 
