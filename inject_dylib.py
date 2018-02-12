@@ -23,7 +23,7 @@ def copyandmodifydepend(originpath,substratePath,injectDylibPath,insertToolPath)
 					shutil.copy(substratePath,copySubstratePath)
 					shutil.copy(injectDylibPath,copyInjectPath)
 					#修改注入dylib的依赖
-					(status, output) = subprocess.getstatusoutput('install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate %s%s %s' % (dependPathPrefix,substratePath[substratePath.rfind(os.sep):],copySubstratePath))
+					(status, output) = subprocess.getstatusoutput('install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate %s%s %s' % (dependPathPrefix,substratePath[substratePath.rfind(os.sep):],copyInjectPath))
 					if status != 0:
 						print('install_name_tool execute failed!')
 						return False
